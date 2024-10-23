@@ -1,0 +1,25 @@
+/* Customize your chatbot styles here */
+.container {
+    margin-top: 50px;
+}
+
+.chat-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chatbox {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-input {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}

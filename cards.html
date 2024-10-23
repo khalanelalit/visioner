@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Payment</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Card Payment</h5>
+                </div>
+                <div class="card-body">
+                    <form action="card" method="post">
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number:</label>
+                            <input type="text" class="form-control" name="cardNumber" placeholder="Enter Card Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expirationDate">Expiration Date:</label>
+                            <input type="text" class="form-control" name="expirationDate" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" class="form-control" name="cvv" placeholder="Enter CVV" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardHolderName">Cardholder Name:</label>
+                            <input type="text" class="form-control" name="cardHolderName" placeholder="Enter Cardholder Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardHolderName">Amount:</label>
+                            <input type="text" class="form-control" name="amount" placeholder="Enter Cardholder Amount" required>
+                        </div>
+              <div class="send_bt">
+								<button type="submit">Proceed To Payment</button>
+							</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Handle payment submission
+    document.getElementById('payButton').addEventListener('click', function () {
+        // You can add your payment processing logic here
+        const cardNumber = document.getElementById('cardNumber').value;
+        const expirationDate = document.getElementById('expirationDate').value;
+        const cvv = document.getElementById('cvv').value;
+        const cardHolderName = document.getElementById('cardHolderName').value;
+        const Amount = document.getElementById('amount').value;
+
+        // Replace this with your payment processing code
+        alert(`Payment with card ending in ${cardNumber.slice(-4)} processed successfully!\nCardholder: ${cardHolderName}`);
+    });
+</script>
+
+</body>
+</html>
